@@ -1,3 +1,3 @@
-# Slider site backend project
-A Spring Boot backend application with H2 in-memory
+# Slider site
+A Spring Boot REST service with an H2 in-memory
  database for a simple slider site.
