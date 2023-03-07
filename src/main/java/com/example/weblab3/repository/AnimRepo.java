@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SliderRepo extends JpaRepository<Slider, Long> {
+public interface AnimRepo extends JpaRepository<Slider, Long> {
 }

@@ -3,22 +3,26 @@ package com.example.weblab3.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "sliders")
+@Table(name = "Animation")
 public class Slider {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String text;
-    private String image;
+    private float speed;
+    private String begin;
+    private String end;
+    private String stop;
 
     public Slider() {
     }
 
-    public Slider(String text, String image) {
-        this.text = text;
-        this.image = image;
+    public Slider(String begin, String end, float speed, String stop) {
+        this.begin = begin;
+        this.end = end;
+        this.speed = speed;
+        this.stop = stop;
     }
 
     public long getId() {
@@ -29,20 +33,75 @@ public class Slider {
         this.id = id;
     }
 
-    public String getText() {
-        return text;
+    public float getSpeed() {
+        return speed;
     }
 
-    public void setText(String firstName) {
-        this.text = firstName;
+    public String getBegin() {
+        return begin;
     }
 
-    public String getImage() {
-        return image;
+    public String getEnd() {
+        return end;
     }
 
-    public void setImage(String lastName) {
-        this.image = lastName;
+    public String getStop() {
+        return stop;
     }
 
+//    public String getReload() {
+//        return reload;
+//    }
+//
+//    public String getLeft() {
+//        return left;
+//    }
+//
+//    public String getRight() {
+//        return right;
+//    }
+//
+//    public String getClose() {
+//        return close;
+//    }
+//
+//    public String getStart() {
+//        return start;
+//    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
+    }
+
+    public void setEnd(String end) {
+        this.end = end;
+    }
+
+    public void setStop(String stop) {
+        this.stop = stop;
+    }
+
+//    public void setReload(String reload) {
+//        this.reload = reload;
+//    }
+//
+//    public void setLeft(String left) {
+//        this.left = left;
+//    }
+//
+//    public void setRight(String right) {
+//        this.right = right;
+//    }
+//
+//    public void setClose(String close) {
+//        this.close = close;
+//    }
+//
+//    public void setStart(String start) {
+//        this.start = start;
+//    }
 }

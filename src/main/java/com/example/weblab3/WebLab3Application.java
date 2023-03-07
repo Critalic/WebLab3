@@ -1,7 +1,7 @@
 package com.example.weblab3;
 
 import com.example.weblab3.model.Slider;
-import com.example.weblab3.repository.SliderRepo;
+import com.example.weblab3.repository.AnimRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,11 +15,10 @@ public class WebLab3Application implements CommandLineRunner {
     }
 
     @Autowired
-    private SliderRepo sliderRepo;
+    private AnimRepo animationRepo;
 
     @Override
     public void run(String... args) throws Exception {
-        this.sliderRepo.save(new Slider("Vladius", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Vlad_Tepes_002.jpg/1200px-Vlad_Tepes_002.jpg"));
-        this.sliderRepo.save(new Slider( "Vladislavidjkhglkskidfg", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Vlad_Tepes_002.jpg/1200px-Vlad_Tepes_002.jpg"));
+        this.animationRepo.save(new Slider("begin","end", 100, "Stop"));
     }
 }
