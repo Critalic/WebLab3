@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>WebLab3</name>
     <description>WebLab3</description>
+    <packaging>war</packaging>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -44,6 +45,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
